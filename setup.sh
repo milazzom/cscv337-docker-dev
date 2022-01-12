@@ -1,1 +1,0 @@
-curl -O http://u.arizona.edu/~milazzom/init.sql
