@@ -1,0 +1,1 @@
+wget http://u.arizona.edu/~milazzom/init.sql
