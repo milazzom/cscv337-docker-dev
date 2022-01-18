@@ -11,15 +11,15 @@ services:
       - "8080:80"
   mysql-server:
     image: mysql:8.0.19
+    command: --default-authentication-plugin=mysql_native_password --init-file /data/application/init.sql
     restart: always
-    command: --init-file /data/application/init.sql
-    volumes:
-        - mysql-data:/var/lib/mysql
-        - ./init.sql:/data/application/init.sql
     environment:
       MYSQL_ROOT_PASSWORD: Be@rD0wN!
-      
-
+    volumes:
+      #- ./data/db:/var/lib/mysql
+      - ./init.sql:/data/application/init.sql
+    ports:
+      - "3306:3306"
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.0.1
     restart: always
@@ -29,5 +29,3 @@ services:
       PMA_PASSWORD: Be@rD0wN!
     ports:
       - "5000:80"
-volumes:
-  mysql-data:
