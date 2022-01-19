@@ -1,1 +1,1 @@
-wget http://u.arizona.edu/~milazzom/init.sql
+curl -O http://u.arizona.edu/~milazzom/init.sql
