@@ -1,3 +1,4 @@
 init.sql
 examples/*
 data/*
+.DS_Store

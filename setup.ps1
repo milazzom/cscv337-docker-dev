@@ -1,0 +1,1 @@
+Invoke-WebRequest -Uri http://u.arizona.edu/~milazzom/init.sql -OutFile init.sql

@@ -1,0 +1,32 @@
+p 
+{
+    color: #00f;
+}
+
+#self-linked
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:red;
+    font-weight: bold;
+}
+
+#imagediv
+{
+    margin-left:100px;
+    margin-right:auto;
+}
+
+.header
+{
+    text-decoration: underline;
+}
+
+.header2
+{
+    font-family: fantasy;
+}
+
+a:hover
+{
+    color:yellow;
+}
