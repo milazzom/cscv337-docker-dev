@@ -21,7 +21,7 @@ services:
     ports:
       - "3306:3306"
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:5.0.1
+    image: phpmyadmin/phpmyadmin:5.1.0
     restart: always
     environment:
       PMA_HOST: mysql-server
