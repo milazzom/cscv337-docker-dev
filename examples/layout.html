@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout/Positioning Example</title>
+</head>
+
+<body>
+    <style>
+        .showing-hiding div {
+            border: 1px cadetblue solid;
+        }
+    </style>
+    <section class="inline-block">
+        <h3>Display: Inline vs. Block</h3>
+        <div>I'm a div</div>
+        <div style="border: 1px red dashed;display:inline">I'm another div</div>
+        <span>I'm a span</span>
+        <a href="https://azcast.arizona.edu" target="_blank">Go to the CAST Homepage</a><img
+            src="https://azcast.arizona.edu/sites/default/files/CAST_scripted_WEB-HEADER_0.png" style="width:300px">
+    </section>
+    <section class="showing-hiding">
+        <h1>Showing/Hiding Elements</h1>
+        <div>Top</div>
+        <div style="visibility: hidden;">Middle</div>
+        <div>Bottom</div>
+    </section>
+    <section>
+        <h1>CSS Sizing</h1>
+        <div style="border: 1px blue solid;">
+            <div style="border-left: 10px green solid;border-bottom: 10px blue solid;width:25%">I'm inside another div</div>
+            <div style="width:75%">I'm another div</div>
+        </div>
+    </section>
+    <section>
+        <h1>Margin, Borders, and Padding</h1>
+        <div style="border: 1px purple solid;">
+            <p style="margin-top: 1em;margin-bottom:1em;padding-left: 1%;background-color:yellow">I'm a paragraph inside a div.</p>
+        </div>
+    </section>
+    <section>
+        <h1>Float</h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+                <a href="https://www.nhl.com/capitals/" target="_blank"><img style="float:left" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Washington_Caps_Alternate.svg/320px-Washington_Caps_Alternate.svg.png"></a>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.</p>
+                
+        </div>
+    </section>
+</body>
+
+</html>
