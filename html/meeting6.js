@@ -15,6 +15,37 @@ function computeFibonacci()
     document.getElementById("result").innerText = "The Fibonacci number at N = " + n + " is:" + fibResult;
 }
 
+function getNumberForCharacter(character)
+{
+    let characters = "abcdefghijklmnopqrstuvwxyz";
+    var outputIndex = -1;
+    
+}
+
+var someString = "This is a user provided string";
+for(var i = 0; i < someString.length; i++)
+{
+    var isUpper = false;
+var code = someString.charCodeAt(i);
+if(code >= 65 && code <= 90) {
+	console.log(someString[i], " is upper case");
+    isUpper = true;
+} else {
+	console.log(someString[i], " is lower case");
+    console.log(someString[i].toUpperCase(), " is the upper case version ");
+}
+
+    var cipherText = "abcdefghijklmnopqrstuvwxyz";
+    var outputCharacter = cipherText[19];
+    console.log("Cipher char: ", outputCharacter);
+    if(isUpper) {
+        console.log(outputCharacter.toUpperCase())
+    } else {
+
+    }
+
+}
+
 function recursiveFibonacci(nthNumber) {
     if(nthNumber == 0)
     {
