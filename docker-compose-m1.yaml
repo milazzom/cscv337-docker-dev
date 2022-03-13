@@ -1,0 +1,34 @@
+version: "3.7"
+services:
+  web-server:
+    platform: linux/amd64
+    build:
+      dockerfile: php.dockerfile
+      context: .
+    restart: always
+    volumes:
+      - "./html/:/var/www/html/"
+    ports:
+      - "8080:80"
+  mysql-server:
+    image: mysql:8.0.19
+    platform: linux/amd64
+    command: --default-authentication-plugin=mysql_native_password --init-file /data/application/init.sql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Be@rD0wN!
+    volumes:
+      #- ./data/db:/var/lib/mysql
+      - ./init.sql:/data/application/init.sql
+    ports:
+      - "3306:3306"
+  phpmyadmin:
+    platform: linux/amd64
+    image: phpmyadmin/phpmyadmin:5.0.1
+    restart: always
+    environment:
+      PMA_HOST: mysql-server
+      PMA_USER: root
+      PMA_PASSWORD: Be@rD0wN!
+    ports:
+      - "5000:80"

@@ -1,0 +1,1 @@
+docker-compose up -d --build -f docker-compose-m1.yaml
