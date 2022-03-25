@@ -18,6 +18,6 @@ $params["lname"] = "Barkley";
 $params["id"] = 81396;
 $preparedStatement = $conn->prepare($sql);
 $preparedStatement->execute($params);
-$conn->close();
+$conn = null;
 
 echo "Last name updated to " . $params["lname"] . " for actor with ID " . $params["id"];

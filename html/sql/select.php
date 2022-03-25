@@ -36,6 +36,7 @@ $data = $conn->query($sql);
             <tr><td><?=$row['first_name']?></td><td><?=$row['last_name']?></td><td><?=$row['id']?></td></tr>                
     <?php
         }
+        $conn = null;
     ?>
 
     </table>
