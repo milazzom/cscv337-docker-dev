@@ -1,15 +1,24 @@
 <?php
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "http://localhost:8080/hw6/actorid.php?first_name=tom&last_name=hanks");
-curl_setopt($ch, CURLOPT_HEADER, TRUE);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-$head = curl_exec($ch);
-$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-print_r($head);
+$options = array(
+    CURLOPT_RETURNTRANSFER => true,     // return web page
+    CURLOPT_HEADER         => false,    // don't return headers
+    CURLOPT_FOLLOWLOCATION => true,     // follow redirects
+    CURLOPT_ENCODING       => "",       // handle all encodings
+    CURLOPT_USERAGENT      => "spider", // who am i
+    CURLOPT_AUTOREFERER    => true,     // set referer on redirect
+    CURLOPT_CONNECTTIMEOUT => 15,      // timeout on connect
+    CURLOPT_TIMEOUT        => 15,      // timeout on response
+    CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
 
-if ($httpCode == 404)
-{
-    echo "Actor/actress does not exist in the database!";
-} else {
-    echo "Actor/actress was found!";
-}
+);
+
+$ch = curl_init();
+$url = "http://web-server:80/hw6/actorid.php?first_name=tom&last_name=hanks";
+$ch = curl_init($url);
+curl_setopt_array( $ch, $options );
+$content = curl_exec( $ch );
+echo curl_error($ch);
+
+$oXML = new SimpleXMLElement($content);
+$actorId = $oXML[0]->attributes()->id;
+echo "Actor id is " . $actorId;
