@@ -17,7 +17,7 @@ services:
       MYSQL_ROOT_PASSWORD: Be@rD0wN!
     volumes:
       #- ./data/db:/var/lib/mysql
-      - ./init.sql:/data/application/init.sql
+      - ./sql:/data/application/
     ports:
       - "3306:3306"
   phpmyadmin:

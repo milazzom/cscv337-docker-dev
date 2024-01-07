@@ -1,1 +1,1 @@
-curl -O http://u.arizona.edu/~milazzom/init.sql
+curl -L http://u.arizona.edu/~milazzom/init.sql --output sql/init.sql
