@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Example</title>
+    <script type="text/javascript" src="jsexample.js"></script>
+</head>
+<body onload="alertMe();">
+    <script type="text/javascript">
+        function alertMe() {
+            alert("You loaded the page!  I'm inside a function that is called when the page loads.");
+        }
+        
+    </script>
+    <script>
+        
+        function greetTheUser(userName) {
+            var heading = document.getElementById("greeting");
+            heading.innerText = "Hello " + userName + "!";
+            heading.addEventListener("click", function() { alert("You clicked the greeting."); });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            var name = prompt("What is your name?");
+            greetTheUser(name);
+        });
+        
+    </script>
+    
+    <h1>JavaScript example for class</h1>
+
+    <p>View the page source to see various ways Javascript is integrated into this page.</p>
+
+    <h2 id="greeting"></h2>
+    <div>
+        <button onclick="clickMe();">Click Me</button>
+    </div>
+    
+</body>
+</html>
