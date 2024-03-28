@@ -19,6 +19,7 @@ $ERROR_MODE    = FALSE;           # can be changed by flag
 $DELAY         = 0;               # can be changed by param or flag
 $RANDOMIZE     = FALSE;           # can be changed by flag or param; shuffles the names to test whether it depends on ABC order
 
+header("Access-Control-Allow-Origin: *");
 # main
 
 # check for various flags
